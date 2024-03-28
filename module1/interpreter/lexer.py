@@ -10,6 +10,8 @@ class Token:
         self.val = val
     def __str__(self) -> str:
         return f'Token({self.type}, {repr(self.val)})'
+
+
 class LexicalError(Exception):
     pass
 
@@ -54,4 +56,4 @@ class Lexer:
             raise LexicalError('Помилка лексичного аналізу')
 
         return Token(TokenType.EOF, None)
-            
+
